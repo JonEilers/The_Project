@@ -25,3 +25,9 @@ Jon: Talk to statistican about hidden markov models and other math shit
 
 Shelby: talk to eric about running on phylosift on Mac
 
+Shelby: look into EDPL
+
+Jon: Newick file format
+
+Email Robin how much of our proposal paper can be shared if we are basically doing the exact same propject. 
+
