@@ -15,4 +15,4 @@ what are the values that corresponde to the reference tree numbers
 
 figure out how to change what information is displayed on the tree using archaeoptryx
 
-
+draw a small tree and make a small jplace file and show how they correspond to eachother.
