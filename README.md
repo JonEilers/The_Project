@@ -29,5 +29,18 @@ Shelby: look into EDPL
 
 Jon: Newick file format
 
-Email Robin how much of our proposal paper can be shared if we are basically doing the exact same propject. 
+Jon: Email Robin how much of our proposal paper can be shared if we are basically doing the exact same propject. what sort of reference can we include. 
+
+Jon: look for figures to use. figure for jplace file, fat tree with placement labels, example of python code
+
+Project proposal paper:
+
+section of psuedo code describing what we are trying to do. 
+
+introduction: talk about why we are doing it: relevance. 
+
+mmethods: psuedo code
+
+expected outcome: really fucking awesome script with a few extras if we have time.
+
 
