@@ -18,7 +18,6 @@ __Jon__
 * How to find leaves in the tree section of the jplace file
 * Talk to statistican about hidden markov models and other math shit
 * Newick file format
-* Email Robin how much of our proposal paper can be shared if we are basically doing the exact same propject. what sort of reference can we include. 
 * look for figures to use. figure for jplace file, fat tree with placement labels, example of python code
 
 ### Project proposal paper:
