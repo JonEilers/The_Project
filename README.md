@@ -39,6 +39,10 @@ __Jon__
 - __References__
   * Ten references: uuhhhh
 
+### Resources
+
+__Online Arhaeoptryx example__ 
+http://matsen.fredhutch.org/pplacer/demo/p4z1r36.html
 
 
 
