@@ -44,6 +44,11 @@ __Jon__
 __Online Arhaeoptryx example__ 
 http://matsen.fredhutch.org/pplacer/demo/p4z1r36.html
 
+__Papers__
+Some papers we could possible reference for our final project presentation/paper? 
+http://matsen.fredhutch.org/pplacer/
+
+
 
 
 
