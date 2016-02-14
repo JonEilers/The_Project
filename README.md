@@ -23,21 +23,21 @@ __Jon__
 
 ### Project proposal paper:
 
-__Sections__
-Introduction
+
+- __Introduction__
   - Background: talk metagenomics -> phylogenetic trees -> pipeline -> pplacer and fat trees
   - Questions/state of the field: No easy way to extract data. 
   - Primary goals: Write a script to extract a variety of data from jplace
   - Hypothesis: We will write a fucking mind blowing script null: it won't be fucking mind blowing or....analysis of internal vs leaves will alter tree interpretation.
-Methods
+- __Methods__
   - Data type: jplace file/json
   * Annotation pipeline: phylosift
   * Statistics: summary statistics 
   * Software packages: phylosift
-Expected Outcomes
+- __Expected Outcomes__
   * What we expect to find: Fucking awesome script. extrapolate on how abundance data will influence interpretation
-  * Mock figures: Psuedo code, concept map, phylogenetic fat tree vs normal tree, 
-References
+  * Mock figures: Psuedo code, concept map, phylogenetic fat tree vs normal tree 
+- __References__
   * Ten references: uuhhhh
 
 
