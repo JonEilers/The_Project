@@ -62,7 +62,6 @@ This contains tidbits on guppy.
 * Interestingly, guppy has a command (info) which writes the number of leaves on the tree and how many partial placements are on each leaf. http://matsen.github.io/pplacer/generated_rst/guppy_info.html#guppy-info
 * Also, the guppy command for making fat trees counts the number reads mapped to internal edges. If we can look at the code and make sense of it we might be able to convert to python. http://matsen.github.io/pplacer/generated_rst/guppy_fat.html#guppy-fat
 
-
-
-
+__DAP__
+Hmmm, maybe we should poke around the DAP to see if any of it could be useful for us? I have access to its github repository. __JE__
 
