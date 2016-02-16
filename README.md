@@ -33,6 +33,7 @@ __Jon__
   - Data type: jplace file/json
   * Annotation pipeline: phylosift
   * Statistics: summary statistics 
+     *We should probably ask what sort of stats we will be doing. She will probably have a better idea that my vaguery  
   * Software packages: phylosift
 - __Expected Outcomes__
   * What we expect to find: Fucking awesome script. extrapolate on how abundance data will influence interpretation
