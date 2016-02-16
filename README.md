@@ -50,7 +50,7 @@ Some papers we could possible reference for our final project presentation/paper
 http://matsen.fredhutch.org/pplacer/
 http://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-538
 
-__Python Parseing__
+__Python JSON Parsing__
 http://docs.python-guide.org/en/latest/scenarios/json/
 
 
