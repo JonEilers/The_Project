@@ -49,6 +49,10 @@ __Papers__
 Some papers we could possible reference for our final project presentation/paper? 
 http://matsen.fredhutch.org/pplacer/
 
+__Guppy Documentation__
+http://matsen.github.io/pplacer/generated_rst/guppy.html#id8
+This contains tidbits on guppy. Interestingly, guppy has a command (info) which writes the number of leaves on the tree and how many partial placements are on each leaf. http://matsen.github.io/pplacer/generated_rst/guppy_info.html#guppy-info
+
 
 
 
