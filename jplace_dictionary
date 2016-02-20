@@ -1,0 +1,11 @@
+import json
+
+# Found this to be interesting. python.json loads the jplace file as a dictionary. There are four keys: version, trees, metadata, and placements.
+
+def jplace(file_jplace):
+    with open(file_jplace) as data:
+        jplace_handle = json.load(data)
+        print jplace_handle.keys()
+ #       print jplace_handle['metadata']
+ #       print jplace_handle['tree']
+ #       print jplace_handle['placements']
