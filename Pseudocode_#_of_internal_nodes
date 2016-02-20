@@ -1,0 +1,5 @@
+def pseudo_internal(jplace file):
+  with open (place_file) as data:
+    jplace_handle = json.load(data)
+    placements = jplace_handle[
+  
