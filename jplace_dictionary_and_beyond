@@ -13,4 +13,4 @@ def jplace(file_jplace):
  #       print jplace_handle['placements']
  
  #       placements = jplace_handle['places']
- #       print placements[1] + /n #Or more, it will print each subsequent 'p' (placement and info) 
+ #       print placements[1]  #Or more, it will print each subsequent 'p' (placement and info) 
