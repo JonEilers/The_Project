@@ -65,3 +65,7 @@ This contains tidbits on guppy.
 __DAP__
 Hmmm, maybe we should poke around the DAP to see if any of it could be useful for us? I have access to its github repository. __JE__
 
+__Newick Format__
+At the bottom of the wikipedia page on newick format is a setion on parsing newick formats. Some interesting bits down there. __JE__
+https://en.wikipedia.org/wiki/Newick_format
+
