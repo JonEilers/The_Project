@@ -66,6 +66,7 @@ __DAP__
 Hmmm, maybe we should poke around the DAP to see if any of it could be useful for us? I have access to its github repository. __JE__
 
 __Newick Format__
-At the bottom of the wikipedia page on newick format is a setion on parsing newick formats. Some interesting bits down there. __JE__
-https://en.wikipedia.org/wiki/Newick_format
+* At the bottom of the wikipedia page on newick format is a setion on parsing newick formats. Some interesting bits down there. https://en.wikipedia.org/wiki/Newick_format __JE__
+* Also, it appears there is a python module for doing things with newick trees. I haven't looked, but I am guessing it might contain hints as to how we could do things to the 'tree' section of the jplace file
+https://github.com/glottobank/python-newick and https://pypi.python.org/pypi/newick/0.4.0 __JE__
 
