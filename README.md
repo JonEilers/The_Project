@@ -12,12 +12,12 @@ __Shelby__
 * look into EDPL
 
 __Jon__
-* [] What is the likelihood and why is negative. What is more likely vs less likely
-* [] what are the values that corresponde to the reference tree numbers
-* [] figure out how to change what information is displayed on the tree using archaeoptryx
-* [] How to find leaves in the tree section of the jplace file
-* [] Talk to statistican about hidden markov models and other math shit
-* [] Newick/jplace tree  parsing
+* [ ] What is the likelihood and why is negative. What is more likely vs less likely
+* [ ] what are the values that corresponde to the reference tree numbers
+* [ ] figure out how to change what information is displayed on the tree using archaeoptryx
+* [ ] How to find leaves in the tree section of the jplace file
+* [ ] Talk to statistican about hidden markov models and other math shit
+* [ ] Newick/jplace tree  parsing
 * [X] look for figures to use. figure for jplace file, fat tree with placement labels, example of python code
 
 ### Project proposal paper:
