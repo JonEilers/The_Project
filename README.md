@@ -7,9 +7,10 @@ __Shelby__
 * [X] What numbers in the jplace file correspond to fields? tree and placements
 * [X] what is named multiplicity? corresponds to the "nm" value in the jplace file
   * If you scroll down to "multiplicity" it talks about what it is. I am finding the documentation about guppy is helpful in general too. http://matsen.github.io/pplacer/generated_rst/guppy.html#id8
-* draw a small tree and make a small jplace file and show how they correspond to eachother.
-* Figure how to tell if placement on the tip vs internal 
-* look into EDPL
+* [ ] Ask Robin/Ryan about duplicate/overlapping sequences in nm key
+* [ ] draw a small tree and make a small jplace file and show how they correspond to eachother.
+* [ ] Figure how to tell if placement on the tip vs internal 
+* [ ] look into EDPL
 
 __Jon__
 * [ ] What is the likelihood and why is negative. What is more likely vs less likely
