@@ -10,6 +10,24 @@ def jplace(file_jplace):
  #       print jplace_handle['metadata']
  #       print jplace_handle['tree']
  #       print jplace_handle['placements']
+
  
- #       placements = jplace_handle['places']
+ #       placements = jplace_handle['placements']
  #       print placements[1]  #Or more, it will print each subsequent 'p' (placement and info) 
+
+#        tree = jplace_handle['tree']
+#        print tree[1:5]
+
+
+        first_placement = placements[0]
+  #      print first_placement
+  #      print first_placement.keys()
+  #      print first_placement.values()
+  
+        fp_internal = first_placement.values()
+  #      print fp_internal.values()
+  
+  
+        fp_place = fp_internal[0]
+        print fp_place[0]
+
