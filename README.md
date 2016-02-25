@@ -70,7 +70,6 @@ __Newick Format__
 * Also, it appears there is a python module for doing things with newick trees. I haven't looked, but I am guessing it might contain hints as to how we could do things to the 'tree' section of the jplace file
 https://github.com/glottobank/python-newick and https://pypi.python.org/pypi/newick/0.4.0 __JE__
 
-__Nested Dictionaries__
-Ok, in rereading the jplace paper I noticed that not only are the sections of the jplace file treated as a dictionary, but also certain subsections are (I think). For example, each placement 'p' has keys and values associated with it. I haven't checked to see how this plays out (mentally out of it at the moment), but there is a python module for nested dictionary. I am assuming that is what this data structure is. Feel free to let me know how wrong i am :-) 
-https://pypi.python.org/pypi/nested_dict __JE__
+__Nested Dictionaries and lists__
+Correct me if I am wrong. The placement section contains a dictionary of placements. Each placement value contains a list of Sequences IDs and a list of placement information such as Tax ID, confidence, etc. __JE__
 
