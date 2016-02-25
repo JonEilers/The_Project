@@ -7,19 +7,19 @@ __Shelby__
 * [X] What numbers in the jplace file correspond to fields? tree and placements
 * [X] what is named multiplicity? corresponds to the "nm" value in the jplace file
   * If you scroll down to "multiplicity" it talks about what it is. I am finding the documentation about guppy is helpful in general too. http://matsen.github.io/pplacer/generated_rst/guppy.html#id8
-* [ ] Ask Robin/Ryan about duplicate/overlapping sequences in nm key
+* [X] Ask Robin/Ryan about duplicate/overlapping sequences in nm key
+  * deduping is for amplicon data. 
 * [ ] draw a small tree and make a small jplace file and show how they correspond to eachother.
 * [ ] Figure how to tell if placement on the tip vs internal 
-* [ ] look into EDPL
 
 __Jon__
-* [ ] What is the likelihood and why is negative. What is more likely vs less likely
-* [ ] what are the values that corresponde to the reference tree numbers
-* [ ] figure out how to change what information is displayed on the tree using archaeoptryx
-* [X] How to find leaves in the tree section of the jplace file
-  * opposing "()" denotes a tree leaf  
-* [ ] Newick/jplace tree parsing
+* [X] what are the values that corresponde to the reference tree numbers
+  *  jplace.fields will tell you what each field is
+* [ ] How to find leaves in the tree section of the jplace file
+  * Opposing "()" denotes a tree leaf  
+* [ ] write class and methods for parsing Newick/jplace tree 
 * [X] look for figures to use. figure for jplace file, fat tree with placement labels, example of python code
+* [ ] write class and methods for parsing placements 
 
 ### Project proposal paper:
 
