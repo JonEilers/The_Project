@@ -1,1 +1,10 @@
+import json
 
+class jplace(object):
+    '''A class for accessing the parts of a jplace file'''
+    def __init__(self, metadata, version, placements, tree, fields):
+        self.metadata = metadata
+        self.version = version
+        self.placements = placements
+        self.tree = tree
+        self.fields = fields
