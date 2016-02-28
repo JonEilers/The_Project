@@ -1,10 +1,23 @@
 import json
 
-class jplace(object):
-    '''A class for accessing the parts of a jplace file'''
-    def __init__(self, metadata, version, placements, tree, fields):
-        self.metadata = metadata
-        self.version = version
-        self.placements = placements
-        self.tree = tree
-        self.fields = fields
+class _JplaceRecordComponent(object):
+    """Component of a JplaceRecord."""
+
+    def contains(self, search_term):
+        """Return True if the component contains the search term.
+        
+        :param search_term: string or compiled regular expression to search for
+        :returns: bool
+        """
+        if hasattr(search_term, "search"):
+            return search_term.search(self._content) is not None
+        return self._content.find(search_term) != -1
+
+class JplaceTree(_JplaceRecordComponent):
+    '''A class representing a phylogenetic tree'''
+    
+class JplaceRecord(object):
+    '''A class representing phylogenetic tree placement'''
+    
+class JplaceParser(object):
+    '''Class for parsing Jplace files'''
