@@ -73,3 +73,7 @@ https://github.com/glottobank/python-newick and https://pypi.python.org/pypi/new
 __Nested Dictionaries and lists__
 Correct me if I am wrong. The placement section contains a dictionary of placements. Each placement value contains a list of Sequences IDs and a list of placement information such as Tax ID, confidence, etc. __JE__
 
+__tinyfasta__
+https://github.com/tjelvar-olsson/tinyfasta/blob/master/tinyfasta/__init__.py
+This is a fasta parsing script written in python 3 which I am attempting to base the jplace parsing script off of. It is broken down in to four sections (main classes): FastaRecordComponent, Sequence, FastaRecord, and FastaParse. Inside each class are subclasses and functions for dealing with the data unique to that section. For example, the first class (FastaRecordComponent) takes a string and checks if it is in the provided data. This is then used in all the other classes. I am invisioning a similar format for the jplace script. The script can then be used in other scripts to perform computations or data extraction. __JE__ 
+
