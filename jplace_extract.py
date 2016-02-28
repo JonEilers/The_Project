@@ -17,26 +17,24 @@ class JplaceTree(_JplaceRecordComponent):
     '''A class representing a phylogenetic tree'''
     
     def __init__(self):
-      '''instead of a sequence this needs to be for storing tree information. What does that look like?'''
-        self._sequences = []
+      '''instead of sequence list this needs to be for storing newick tree information. What does that look like?'''
+        self._tree = []
         
     def __str__(self):
         return self._content
         
     def __node__(self, nodes = total):
         """standalone function. returns number of internal, external, and total nodes. Should it be nodes or edges?"""
-#        return sum(len(s) for s in self._sequences)
- 
+        
     def __branch__(self, initial_node = 0, leaf = none):
         '''calculates the branch length given the starting node and ending node. default ending node is none, 
         this finds the longest branch length and returns it.'''
-    
-    @property
-    
+
     
 '''I am not sure what to do with this function. It returns a DNA/RNA/Protein sequence as a string, but how does this 
 relate to a phylogenetic tree? This function ensure that the input is parsable by python. If we do this with the newick format
 phylogenetic tree it will have the same affect yes? Is the .join necessary in this case?'''
+
     def _content(self):
         """Return the tree-text as a string.
         
