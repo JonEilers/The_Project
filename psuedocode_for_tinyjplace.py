@@ -1,3 +1,5 @@
+''' Example of class structure that is simple and modular''' 
+
 class data(object):
   
   def content(self):
