@@ -1,5 +1,5 @@
 {
-	#{} indicate each edge number
+	#{} indicate each edge number--edge numbers start at the tips (top-most tip is edge 0, tip underneath that is edge 1) and then move inward 
 	#set of closed parentheses ex: (A,B) indicate tips
 	#number following node labels ex: (A:0.2) are branch lengths (we dont really need to worry about that)
 	#commas likely show where nodes between branches exist
