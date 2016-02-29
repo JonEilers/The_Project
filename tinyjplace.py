@@ -29,6 +29,9 @@ class NewickTree(_JplaceRecordComponent):
     def __branch__(self, initial_node = 0, leaf = none):
         '''calculates the branch length given the starting node and ending node. default ending node is none, 
         this finds the longest branch length and returns it.'''
+        
+    def __branch.length)__(self, edge):
+        '''returns the branch length for that edge'''
 
     def _content(self):
         """Return the newick tree as a dictionary with key as node and values as everything else?.
