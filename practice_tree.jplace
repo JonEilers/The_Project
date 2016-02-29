@@ -1,5 +1,9 @@
 {
-	"tree": "((A:0.2{0},B:0.09{1}):0.7{2},C:0.5{3}){4};", 
+	#{} indicate each edge number
+	#set of closed parentheses ex: (A,B) indicate tips
+	#number following node labels ex: (A:0.2) are branch lengths (we dont really need to worry about that)
+	#commas likely show where nodes between branches exist
+	"tree": "((A:0.2{0},B:0.09{1}):0.7{2},C:0.5{3}){4};",  
 	"placements":
 	[
 		{"p":
