@@ -44,7 +44,7 @@ class NewickTree(_JplaceRecordComponent):
         :param tree_node: dict key/value representing part of a newick formatted tree.
         """
         
-    def format_line_length(self, node_data):
+    def format_tree_node(self, node_data):
         """iterates over the newick tree found in the jplace file, extracts a single node and formats it as 
         a key/value dictionary pair. Each key contains information connecting it to distal and proximal nodes. 
         These are used when writing out the
