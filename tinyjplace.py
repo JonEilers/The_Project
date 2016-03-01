@@ -71,9 +71,18 @@ class PlacementRecord(object):
     
     class SequenceID(self, _JplaceRecordComponent):
         '''Takes the Sequence IDs associated with n/nm key in a placement dictionary'''
+        
+        #what functions need to go here?
+        
+          def __init__(self, sequenceID):
+            self.update(sequenceID)
     
     class Placement_Fields(self, _JplaceRecordComponent):
         '''Takes the list associated with the field key in a placement dictionary'''
+        
+        #what functions need to go here?
+        def __init__(self, placement_dictionary):
+            self.update(placement_dictionary)
         
     def jplace_placement_fields(self):
         '''checks jplace file metadata for presence of fields. 
@@ -88,6 +97,14 @@ class PlacementRecord(object):
     def placements_containing(self, field_value):
         '''returns all placements containing a specific field value or sequence ID'''
         
+    def __init__(self, PlacementRecord):
+        """Initialise an instance of the :class:`tinyjplace.PlacementRecord` class.
+        
+        :param description: description string
+        """
+        self.description = PlacementRecord.Description(description)
+        self.sequence = Sequence()
+        
     def placement_add(self, field_value):
         '''adds placement to tinyjplace.JplaceRecord instance.
         
@@ -96,6 +113,8 @@ class PlacementRecord(object):
         provided.
         :param placement: dictionary containing placement info
         '''
+        
+        
 _____________________________________________________________________________________________________________
     @staticmethod
     def create(description, sequence):
@@ -124,18 +143,7 @@ ________________________________________________________________________________
         lines.extend(self.sequence._sequences)
         return '\n'.join(lines)
 
-    def __len__(self):
-        """Return the length of the biological sequence."""
-        return len(self.sequence)
 
-    def add_sequence_line(self, sequence_line):
-        """Add a sequence line to the :class:`tinyfasta.FastaRecord` instance.
-        This function can be called more than once. Each time the function is
-        called the :attr:`tinyfasta.sequence` is extended by the sequence line
-        provided.
-        :param sequence_line: string representing (part of) a sequence
-        """
-        self.sequence.add_sequence_line(sequence_line)
 ____________________________________________________________________________________________    
 class JplaceParser(object):
     '''Class for parsing Jplace files'''
