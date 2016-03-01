@@ -11,6 +11,7 @@ __Shelby__
   * deduping is for amplicon data. 
 * [ ] draw a small tree and make a small jplace file and show how they correspond to eachother.
 * [ ] Figure how to tell if placement on the tip vs internal 
+* [ ] email Filip about python
 
 __Jon__
 * [X] what are the values that corresponde to the reference tree numbers
