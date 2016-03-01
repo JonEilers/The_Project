@@ -75,6 +75,27 @@ class PlacementRecord(object):
     class Placement_Fields(self, _JplaceRecordComponent):
         '''Takes the list associated with the field key in a placement dictionary'''
         
+    def jplace_placement_fields(self):
+        '''checks jplace file metadata for presence of fields. 
+        
+        returns: field name and list index number.'''
+        
+    def field_contains(self, field_name):
+        '''checks to see if given field is in metadata
+        
+        returns list index value'''
+        
+    def placements_containing(self, field_value):
+        '''returns all placements containing a specific field value or sequence ID'''
+        
+    def placement_add(self, field_value):
+        '''adds placement to tinyjplace.JplaceRecord instance.
+        
+        This function can be called more than once. Each time the function is
+        called the :attr:`tinyjplace.placement` is extended by the placement
+        provided.
+        :param placement: dictionary containing placement info
+        '''
 _____________________________________________________________________________________________________________
     @staticmethod
     def create(description, sequence):
