@@ -1,6 +1,8 @@
 # The_Project
 Bio-497 environmental genomics class project: Shelby and Jon
 
+__Quick note__ So the script structure I am working is probably going to be very confusing. what I would like to do is find an empty room with a white board and work my way through it, drawing lines and creating a flow chart, until it makes sense. 
+
 ### To do list
 
 __Shelby__
@@ -77,4 +79,8 @@ Correct me if I am wrong. The placement section contains a dictionary of placeme
 __tinyfasta__
 https://github.com/tjelvar-olsson/tinyfasta/blob/master/tinyfasta/__init__.py
 This is a fasta parsing script written in python 3 which I am attempting to base the jplace parsing script off of. It is broken down in to four sections (main classes): FastaRecordComponent, Sequence, FastaRecord, and FastaParse. Inside each class are subclasses and functions for dealing with the data unique to that section. For example, the first class (FastaRecordComponent) takes a string and checks if it is in the provided data. This is then used in all the other classes. Another example is the Sequence class which looks at the sequence in each fasta record. The FastaRecord class looks at the description part of each fasta reord. I am invisioning a similar format for the jplace script. Each section has a unique class for parsing it. The class will contain short functions, each created for one purpose and then utilized in other parts of the class or script. At least, that is what I think I was seeing in the tinyfasta script. __JE__ 
+
+__Enumerate__
+https://yuji.wordpress.com/2008/05/14/python-basics-of-python-dictionary-and-looping-through-them/
+That is a link to some "hopefully" good info on iterating through data types. __JE__
 
