@@ -17,22 +17,30 @@ class NewickTree(_JplaceRecordComponent):
     '''A class representing a phylogenetic tree'''
     
     def __init__(self):
-      '''dictionary contains newick tree information3'''
+      '''dictionary contains newick tree information'''
         self._tree = {}
         
     def __str__(self):
         return self._content
         
-    def __node__(self, nodes = total):
-        """standalone function. returns number of internal, external, and total nodes. Should it be nodes or edges?"""
-        
-    def __branch__(self, initial_node = 0, leaf = none):
+    def __branch_length__(self, initial_node = 0, leaf = none):
         '''calculates the branch length given the starting node and ending node. default ending node is none, 
         this finds the longest branch length and returns it.'''
+    
+    def internal_edge(self):
+        '''parses a Newick tree and returns all the internal edges stores it as a dictionary. 
         
-    def __branch.length)__(self, edge):
-        '''returns the branch length for that edge'''
-
+        key: edge number
+        values: edges or nodes it is connected to
+        '''
+        
+    def leaf((self):
+        '''parses a Newick tree and returns all leafs, storing them in a dictionary
+        
+        key: edge number
+        values: edge or node it is connected to
+        '''
+    
     def _content(self):
         """Return the newick tree as a dictionary with key as node and values as everything else?.
         
@@ -41,6 +49,8 @@ class NewickTree(_JplaceRecordComponent):
         
     def add_tree_edge(self, tree_node):
         """
+        for parsing a tree and storing desirable values
+        
         Adds node/edge and its info to the JplaceTree instance. This function can
         be called more than once. Each time the function is called the :class: tinyjplace.NewickTree
         dictionary is extended by the key/value pair provided.
