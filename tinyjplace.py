@@ -97,13 +97,22 @@ class PlacementRecord(object):
     def placements_containing(self, field_value):
         '''returns all placements containing a specific field value or sequence ID'''
         
-    def __init__(self, PlacementRecord):
-        """Initialise an instance of the :class:`tinyjplace.PlacementRecord` class.
         
-        :param description: description string
+    @staticmethod
+    def create(tree, placements):
+        """Return a FastaRecord.
+        
+        :param tree: description string
+        :param placements: full sequence string
+        :returns: :class:`tinyjplace.PlacementRecord`
         """
-        self.description = PlacementRecord.Description(description)
-        self.sequence = Sequence()
+        
+    def __init__(self, placement_fields):
+        """Initialise an instance of the :class:`tinyjplace.Placement_Fields` class.
+        
+        :param placement_field: list
+        """
+       
         
     def placement_add(self, field_value):
         '''adds placement to tinyjplace.JplaceRecord instance.
@@ -114,36 +123,14 @@ class PlacementRecord(object):
         :param placement: dictionary containing placement info
         '''
         
-        
-_____________________________________________________________________________________________________________
-    @staticmethod
-    def create(description, sequence):
-        """Return a FastaRecord.
-        
-        :param description: description string
-        :param sequence: full sequence string
-        :returns: :class:`tinyfasta.FastaRecord`
-        """
-        fasta_record = FastaRecord(description)
-        fasta_record.add_sequence_line(sequence)
-        fasta_record.sequence.format_line_length()
-        return fasta_record
-
-    def __init__(self, description):
-        """Initialise an instance of the :class:`tinyfasta.FastaRecord` class.
-        
-        :param description: description string
-        """
-        self.description = FastaRecord.Description(description)
-        self.sequence = Sequence()
-
-    def __str__(self):
-        """String representation of the :class:`tinyfasta.FastaRecord` instance."""
-        lines = [str(self.description),]
-        lines.extend(self.sequence._sequences)
-        return '\n'.join(lines)
-
-
-____________________________________________________________________________________________    
 class JplaceParser(object):
     '''Class for parsing Jplace files'''
+    
+    def __init__(self, filepath):
+        '''initialize an instance of the JplaceParser.
+        
+        :param filepath: path to the Jplace file to be parsed
+        '''
+        
+    def __iter__(self):
+        '''Yield PlacementRecord instance.'''
