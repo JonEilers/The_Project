@@ -1,3 +1,10 @@
+"""Package for parsing and generating Jplace files for phylogenetic tree analysis.
+Use the :class:`tinyjplace.JplaceParser` class to parse Jplace files. 
+To generate Jplace files use the  :func:`tinyjplace.PlacmeentRecord.create` static
+method to create :class:`tinyjplace.JplaceRecord` instances, which can be written
+to file.
+"""
+
 import json
 
 class _JplaceRecordComponent(object):
