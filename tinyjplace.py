@@ -128,7 +128,18 @@ class JplaceRecord(object):
         
         :param placement_field: list
         """
-       
+        
+        self.placement_fields = FastaRecord.Placement_Fields(placement_fields)
+        self.tree = Tree() #Need to think about this. Does this make any sense? 
+   
+'''        
+    def __str__(self):
+        """String representation of the :class:`tinyfasta.FastaRecord` instance."""
+        lines = [str(self.description),]
+        lines.extend(self.sequence._sequences)
+        return '\n'.join(lines)
+'''        
+        
         
     def add_placement(self, field_value):
         '''adds placement to tinyjplace.JplaceRecord instance.
