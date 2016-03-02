@@ -161,12 +161,8 @@ class JplaceParser(object):
                     
                 elif key == 'placements':
                     
-                elif key == 'metadata':
-                    
-                elif key == 'fields':
-                    
                 else:
-                    print("error, this ain't no stinking jplace file')
+                 #add the remaining keys/values to the new file?
  '''                   
                     if jplace_record: 
                         yield jplace_record
