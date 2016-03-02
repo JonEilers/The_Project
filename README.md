@@ -89,3 +89,7 @@ __None__
 A python object representing absolutely nothing. Here is an interesting article on it. http://pythoncentral.io/python-null-equivalent-none/
 The tinyfasta uses it in the last class FastaParse for creating and storing a fasta_record instance. or something like that. So I included it in the framework we are working on. __JE__
 
+__checking open/closed parentheses__
+http://www.scientificpython.net/pyblog/checking-a-text-file-for-matching-parentheses-brackets-and-braces
+Could be useful for finding tips in sets of closed parentheses.
+
