@@ -29,7 +29,7 @@ class NewickTree(_JplaceRecordComponent):
     def __str__(self):
         return self._content
         
-    @property
+    @property #what does this decorator do? is it a built in python function?
     def _content(self):
         """Return the newick tree as a dictionary with key as node and values as everything else?.
         
@@ -112,7 +112,7 @@ class PlacementRecord(object):
         '''returns all placements containing a specific field value or sequence ID'''
         
         
-    @staticmethod
+    @staticmethod #what the hell is this?
     def create(tree, placements):
         """Return a PlacementRecord.
         
