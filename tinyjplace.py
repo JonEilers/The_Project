@@ -33,7 +33,7 @@ class NewickTree(_JplaceRecordComponent):
         :returns: dict
         """
         
-        return ''.join(self._sequences) #
+        return ''.join(self._tree) #
         
     def add_tree_edge(self, tree_edge):
         """
