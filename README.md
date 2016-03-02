@@ -92,4 +92,5 @@ The tinyfasta uses it in the last class FastaParse for creating and storing a fa
 __checking open/closed parentheses__
 http://www.scientificpython.net/pyblog/checking-a-text-file-for-matching-parentheses-brackets-and-braces
 Could be useful for finding tips in sets of closed parentheses.
+*Nice! I like it. __JE__
 
