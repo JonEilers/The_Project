@@ -151,7 +151,7 @@ class JplaceParser(object):
         
         jplace_record = None
         with open(self.filepath, 'r') as fh:
-            for line in fh: #needs to loop across placements 
+            for line in fh: #needs to loop across placements, which are dictionaries?
                 if line.startswith('p'): 
                     if jplace_record:
                         yield jplace_record
