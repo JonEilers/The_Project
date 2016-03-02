@@ -174,7 +174,7 @@ class JplaceParser(object):
                 else: #adds another line?
                     jplace_record.add_placement(placement)'''
         yield jplace_record
-'''python.json loads jplace as a dictionary. tinyfasta iterates across each line, checking if it starts with a 'p'. 
+'''python.json loads jplace as a dictionary. tinyfasta iterates across each line as a string, checking if it starts with a 'p'. 
 if so, then that line is a sequence-discription. if not then it is a sequence or a line break. tinyfasta then does
 its thing. In a jplace file, there are four dictionary keys: metadata, fields, tree, placements. Each has a unique 
 format. If we want to iterate across the jplace file, we need to specify which key. '''
