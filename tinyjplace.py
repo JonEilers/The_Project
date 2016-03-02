@@ -144,7 +144,7 @@ class JplaceParser(object):
         :param filepath: path to the Jplace file to be parsed
         '''
         
-        self.fpath = filepath
+        self.filepath = filepath
         
     def __iter__(self):
         '''Yield JplaceRecord instance.'''
