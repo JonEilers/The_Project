@@ -156,19 +156,15 @@ class JplaceParser(object):
         jplace_record = None
         with open(self.filepath, 'r') as fh:
             file_handle = json.load(fh)
-            for key in file_handle: #needs to loop across initial keys in a jplace file
+            for key in file_handle: #needs to loop across initial keys in a jplace file (enumerate?)
                 if key == 'tree':
-                    
-                elif key == 'placements':
-                    
-                else:
-                 #add the remaining keys/values to the new file?
- '''                   
                     if jplace_record: 
                         yield jplace_record
                     jplace_record = JplaceRecord(placement)
-                else: #adds another line?
-                    jplace_record.add_placement(placement)'''
+                elif key == 'placements':
+                    jplace_record.add_placement(placement)
+                else:
+                 #add the remaining keys to jplace_record instance
         yield jplace_record
 '''python.json loads jplace as a dictionary. tinyfasta iterates across each line as a string, checking if it starts with a 'p'. 
 if so, then that line is a sequence-discription. if not then it is a sequence or a line break. tinyfasta then does
