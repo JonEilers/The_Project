@@ -130,7 +130,7 @@ class JplaceRecord(object):
         """
         
         self.placement_fields = FastaRecord.Placement_Fields(placement_fields)
-        self.tree = Tree() #Need to think about this. Does this make any sense? 
+        self.tree = Tree() #Need to think about this. Does this make any sense? Back to work, will check later
    
 '''        
     def __str__(self):
