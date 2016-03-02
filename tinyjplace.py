@@ -160,7 +160,7 @@ class JplaceParser(object):
                 if key == 'tree':
                     if jplace_record: 
                         yield jplace_record
-                    jplace_record = JplaceRecord(placement)
+                    jplace_record = JplaceRecord(tree) #need to think about this more
                 elif key == 'placements':
                     jplace_record.add_placement(placement)
                 else:
