@@ -44,7 +44,7 @@ class NewickTree(_JplaceRecordComponent):
         :param tree_edge: dict key/value representing part of a newick formatted tree.
         """
         
-        self._sequences.append( sequence_line.strip() ) #needs to be a bit more complicated then this. 
+        self._sequences.append( sequence_line.strip() ) #what data type is the tree dict value? str or list? 
         
     def format_tree_edge(self, edge_data):
         """Takes a tree edge and formats it as a key/value dictionary pair.
