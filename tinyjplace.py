@@ -107,7 +107,7 @@ class PlacementRecord(object):
         
     @staticmethod
     def create(tree, placements):
-        """Return a FastaRecord.
+        """Return a PlacementRecord.
         
         :param tree: description string
         :param placements: full sequence string
