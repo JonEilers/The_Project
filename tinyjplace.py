@@ -44,6 +44,8 @@ class NewickTree(_JplaceRecordComponent):
         :param tree_edge: dict key/value representing part of a newick formatted tree.
         """
         
+        self._sequences.append( sequence_line.strip() ) #needs to be a bit more complicated then this. 
+        
     def format_tree_edge(self, edge_data):
         """Takes a tree edge and formats it as a key/value dictionary pair.
         The value contains information connecting it to distal and proximal nodes. 
@@ -135,6 +137,8 @@ class JplaceRecord(object):
         :param placement: dictionary containing placement info
         '''
         
+        self.sequence.add_edge(field_value)
+        
 class JplaceParser(object):
     '''Class for parsing Jplace files'''
     
@@ -151,11 +155,26 @@ class JplaceParser(object):
         
         jplace_record = None
         with open(self.filepath, 'r') as fh:
-            for line in fh: #needs to loop across placements, which are dictionaries?
-                if line.startswith('p'): 
-                    if jplace_record:
+            file_handle = json.load(fh)
+            for key in file_handle: #needs to loop across initial keys in a jplace file
+                if key == 'tree':
+                    
+                elif key == 'placements':
+                    
+                elif key == 'metadata':
+                    
+                elif key == 'fields':
+                    
+                else:
+                    print("error, this ain't no stinking jplace file')
+ '''                   
+                    if jplace_record: 
                         yield jplace_record
                     jplace_record = JplaceRecord(placement)
-                else:
-                    jplace_record.add_placement(placement)
+                else: #adds another line?
+                    jplace_record.add_placement(placement)'''
         yield jplace_record
+'''python.json loads jplace as a dictionary. tinyfasta iterates across each line, checking if it starts with a 'p'. 
+if so, then that line is a sequence-discription. if not then it is a sequence or a line break. tinyfasta then does
+its thing. In a jplace file, there are four dictionary keys: metadata, fields, tree, placements. Each has a unique 
+format. If we want to iterate across the jplace file, we need to specify which key. '''
