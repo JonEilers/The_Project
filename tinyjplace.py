@@ -33,6 +33,8 @@ class NewickTree(_JplaceRecordComponent):
         :returns: dict
         """
         
+        return ''.join(self._sequences) #
+        
     def add_tree_edge(self, tree_edge):
         """
         Add an edge to the :class: tinyjplace.NewickTree instance.
@@ -137,7 +139,7 @@ class JplaceRecord(object):
         :param placement: dictionary containing placement info
         '''
         
-        self.sequence.add_edge(field_value)
+        self.NewickTree.add_tree_edge(field_value)
         
 class JplaceParser(object):
     '''Class for parsing Jplace files'''
