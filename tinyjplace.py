@@ -140,6 +140,7 @@ class JplaceRecord(object):
         '''
         
         self.NewickTree.add_tree_edge(field_value)
+        '''this doesn't make sense. Each time this is called it should add a placement to the placement dictionary? Not the tree dictionary'''
         
 class JplaceParser(object):
     '''Class for parsing Jplace files'''
