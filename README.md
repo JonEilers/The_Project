@@ -1,7 +1,7 @@
 # The_Project
 Bio-497 environmental genomics class project: Shelby and Jon
 
-__Quick note__ So the script structure I am working is probably going to be very confusing. what I would like to do is find an empty room with a white board and work my way through it, drawing lines and creating a flow chart, until it makes sense. 
+__Quick notes__ I finished the outline. It needs some work though. Some of the structure doesn't work because the data format of a fasta is very different from jplace. I am not sure how to translate from parsing two different strings to parsing a nested dictionary and a string containing way too many strange characters. I think it would be good to sit down infront of a whiteboard and diagram the shit out of it. That and talk to an expert such as a prof or Eric.  I am going to begin work on the coding. O.O watch me run into a brick wall now :P 
 
 ### To do list
 
