@@ -1,8 +1,5 @@
 """Package for parsing and generating Jplace files for phylogenetic tree analysis.
 Use the :class:`tinyjplace.JplaceParser` class to parse Jplace files. 
-To generate Jplace files use the  :func:`tinyjplace.PlacmeentRecord.create` static
-method to create :class:`tinyjplace.JplaceRecord` instances, which can be written
-to file.
 """
 
 import json
@@ -80,8 +77,8 @@ class NewickTree(_JplaceRecordComponent):
         values: edge or node it is connected to
         '''
     
-class PlacementRecord(object):
-    '''A class representing phylogenetic tree placements'''
+class JplaceRecord(object):
+    '''A class representing a Jplace record'''
     
     class SequenceID(self, _JplaceRecordComponent):
         '''Takes the Sequence IDs associated with n/nm key in a placement dictionary'''
@@ -111,7 +108,7 @@ class PlacementRecord(object):
     def placements_containing(self, field_value):
         '''returns all placements containing a specific field value or sequence ID'''
         
-        
+'''        
     @staticmethod #what the hell is this?
     def create(tree, placements):
         """Return a PlacementRecord.
@@ -120,7 +117,8 @@ class PlacementRecord(object):
         :param placements: full sequence string
         :returns: :class:`tinyjplace.PlacementRecord`
         """
-        
+'''
+
     def __init__(self, placement_fields):
         """Initialise an instance of the :class:`tinyjplace.Placement_Fields` class.
         
@@ -128,7 +126,7 @@ class PlacementRecord(object):
         """
        
         
-    def placement_add(self, field_value):
+    def add_placement(self, field_value):
         '''adds placement to tinyjplace.JplaceRecord instance.
         
         This function can be called more than once. Each time the function is
@@ -146,5 +144,18 @@ class JplaceParser(object):
         :param filepath: path to the Jplace file to be parsed
         '''
         
+        self.fpath = filepath
+        
     def __iter__(self):
-        '''Yield PlacementRecord instance.'''
+        '''Yield JplaceRecord instance.'''
+        
+        jplace_record = None
+        with open(self.filepath, 'r') as fh:
+            for line in fh: #needs to loop across placements 
+                if line.startswith('p'): 
+                    if jplace_record:
+                        yield jplace_record
+                    jplace_record = JplaceRecord(placement)
+                else:
+                    jplace_record.add_placement(placement)
+        yield jplace_record
