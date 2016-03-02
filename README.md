@@ -82,5 +82,10 @@ This is a fasta parsing script written in python 3 which I am attempting to base
 
 __Enumerate__
 https://yuji.wordpress.com/2008/05/14/python-basics-of-python-dictionary-and-looping-through-them/
-That is a link to some "hopefully" good info on iterating through data types. __JE__
+That is a link to some "hopefully" good info on iterating through data types. The article is a bit dated (2008) 
+but contains a lot of useful insight. I think the python method .enumerate() fulfills the role of .iteritem() __JE__
+
+__None__
+A python object representing absolutely nothing. Here is an interesting article on it. http://pythoncentral.io/python-null-equivalent-none/
+The tinyfasta uses it in the last class FastaParse for creating and storing a fasta_record instance. or something like that. So I included it in the framework we are working on. __JE__
 
