@@ -6,7 +6,7 @@ external_count = 0
 with open('COG0001.aligned.jplace') as jplace_file:
     jplace_handle = json.load(jplace_file)
     placements = jplace_handle['placements']
-    for placement in placements:
+    for placement in placements: #it works, but I am guessing there is a more efficient way to dig deep into a dictionary
         placement_values = placement.values()
         placement_fields = placement_values[0]
         placement_field_values = placement_fields[0]
