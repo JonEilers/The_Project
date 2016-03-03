@@ -9,7 +9,7 @@ with open('COG0001.aligned.jplace') as jplace_file:
     for placement in placements: #it works, but I am guessing there is a more efficient way to dig deep into a dictionary
         placement_values = placement.values()
         placement_fields = placement_values[0]
-        placement_field_values = placement_fields[0]
+        placement_field_values = placement_fields[0] #grabs the first placement listed, regardless of confidence
         placement_edge = placement_field_values[2]
         if placement_edge in test_internal:
             internal_count += 1
