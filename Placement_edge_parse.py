@@ -7,9 +7,8 @@ with open('COG0001.aligned.jplace') as jplace_file:
     jplace_handle = json.load(jplace_file)
     placements = jplace_handle['placements'] #placement key in json
     for placement in placements: #it works, but I am guessing there is a more efficient way to dig deep into a dictionary
-        placement_values = placement.values()[0] # values of placement key
-        placement_field_values = placement_values[0] #grabs the first placement listed, regardless of confidence
-        placement_edge = placement_field_values[2]
+        placement_values = placement.values()[0] 
+        placement_edge = placement_values[0][2] #grabs the first placement listed, regardless of confidence
         if placement_edge in test_internal
             internal_count += 1
         elif placement_edge in test_external:
