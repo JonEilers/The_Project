@@ -1,34 +1,34 @@
-#Author : Shelby Landa
-#Project : BIOL497 Final Project
-#File name : TreeParse.py
-#Date :
-
 import json
 import re
 
 with open("COG0001.aligned.jplace") as json_data:
 
     data = json.load(json_data)
+
+    ##json parse
+    nodeNum = 0
     tree = data['tree']
+    edges = tree.split('{')
+    for edge in edges:
+        if '}' in edges:
+            edges += 1
+
     branches = re.split('[, ( )]' , tree)
-    
-    #arbitrary length to test ability of loops to do the right thing
     arbLen = 50
-    #small subsect of larger tree
-    smallBranches = branches[0:arbLen]
-    
-    #initialize leafCount variable 
+    #smallBranches = branches[0:arbLen]
+
     leafCount = 0
-    
-    # | is only present in tip labels
-    for i in smallBranches:
-       # if len(i) == 0:
+    edgeTotal = 0
+    for i in branches:
+      # # if len(i) == 0:
         #    del branches[i]
         if "|" in i:
-            #increment leafCount by 1
             leafCount+=1
-    #does leafCount work with smallBranches length??
+
+
+    #Node(tree)
+
     print leafCount
-    #check branches with leafCount
-    print branches[0:arbLen]
+    print nodeNum - 1
+    #print branches[0:arbLen]
     
