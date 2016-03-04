@@ -1,7 +1,9 @@
 # The_Project
 Bio-497 environmental genomics class project: Shelby and Jon
 
-__Quick notes__ I finished the outline. It needs some work though. Some of the structure doesn't work because the data format of a fasta is very different from jplace. I am not sure how to translate from parsing two different strings to parsing a nested dictionary and a string containing way too many strange characters. I think it would be good to sit down infront of a whiteboard and diagram the shit out of it. That and talk to an expert such as a prof or Eric.  I am going to begin work on the coding. O.O watch me run into a brick wall now :P 
+__Quick notes__ Ok, so we have a working script. What do we want to do now? It would be kinda fun to write a script to generate a jplace file we can then test our little script on. Also, I know in the half of the script I wrote it there are a few lines of code which might throw errors if the jplace file has a different format. Is there a possibility for that in your half? We might might want to consider expanding the script so it checks jplace format. 
+
+Awesome job by the way!!!! I have really enjoyed working with you. You are a damn fine coder, way better than me. :-) __JE__
 
 ### To do list
 
