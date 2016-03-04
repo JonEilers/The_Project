@@ -34,7 +34,7 @@ with open("COG0001.aligned.jplace") as json_data:
     jplace_handle = data
     placements = jplace_handle['placements'] #placement key in json
     for placement in placements: #it works, but I am guessing there is a more efficient way to dig deep into a dictionary
-        placement_edge = placement.values()[0][0][2]
+        placement_edge = placement.values()[0][0][2] #The index for edge placement number may not work for every jplace file
         if placement_edge in internalEdges:
             internal_count += 1
         elif placement_edge in leafEdges:
