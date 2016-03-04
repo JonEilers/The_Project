@@ -3,15 +3,15 @@ import re
 import ast
 
 internal_count = 0
-external_count = 0
+leaf_count = 0
 
 
 with open("COG0001.aligned.jplace") as json_data:
 
-    data = json.load(json_data)
+    jplace_handle = json.load(json_data)
 
     ##json parse--extract tree string
-    tree = data['tree']
+    tree = jplace_handle['tree']
     branches = re.split('[, ( )]' , tree)
 
     #initialize edgeCount at -1 because the root is indicated by a {x} but we dont want to count that in the edgeCount variable
@@ -31,13 +31,12 @@ with open("COG0001.aligned.jplace") as json_data:
             internal_edgeNum = int(v.split('{')[1].split('}')[0])
             internalEdges.append(internal_edgeNum)
             
-    jplace_handle = data
     placements = jplace_handle['placements'] #placement key in json
     for placement in placements: #it works, but I am guessing there is a more efficient way to dig deep into a dictionary
         placement_edge = placement.values()[0][0][2] #The index for edge placement number may not work for every jplace file
         if placement_edge in internalEdges:
             internal_count += 1
         elif placement_edge in leafEdges:
-            external_count += 1
+            leaf_count += 1
     print(internal_count)
     print(external_count)
