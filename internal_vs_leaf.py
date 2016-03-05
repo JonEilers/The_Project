@@ -39,4 +39,4 @@ with open("COG0001.aligned.jplace") as json_data:
         elif placement_edge in leafEdges:
             leaf_count += 1
     print(internal_count)
-    print(external_count)
+    print(leaf_count)
