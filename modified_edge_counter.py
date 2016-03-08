@@ -69,6 +69,8 @@ with open("COG0001.aligned.jplace") as json_data:
             num_leaf_placements += numReads
     print(internal_count)
     print(external_count)
+    print(num_internal_placements)
+    print(num_leaf_placements)
     
     #sort [edge,seqNum] lists from lowest to highest edge number
     leafList.sort(key=lambda x: x[0])
