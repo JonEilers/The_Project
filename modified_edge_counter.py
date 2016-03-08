@@ -42,10 +42,14 @@ with open("COG0001.aligned.jplace") as json_data:
     #initialize lists
     leafList = []
     internalList = []
+    
+    #initialize abundance counts
+    num_leaf_placements = 0
+    num_internal_placements = 0  
 
     for i in placements: #it works, but I am guessing there is a more efficient way to dig deep into a dictionary
 
-        placement_edge = i.values()[0][0][2]
+        placement_edge = i.values()[0][0][2] 
         
         # from what I understand the 'nm' list under 'p' is the sequences assigned to that edge. want to clarify with robin though
         multiplicity = i.values()[1]
@@ -58,9 +62,11 @@ with open("COG0001.aligned.jplace") as json_data:
         if placement_edge in internalEdges:
             internalList.append(smallList)
             internal_count += 1
+            num_internal_placements += numReads
         elif placement_edge in leafEdges:
             leafList.append(smallList)
             external_count += 1
+            num_leaf_placements += numReads
     print(internal_count)
     print(external_count)
     
