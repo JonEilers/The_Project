@@ -48,7 +48,11 @@ __Jon__
 
 ### Final Project Paper
  - __Introduction__ 
-   -Use the same intro from project proposal + whatever needs to be changed on it 
+   - Use the same intro from project proposal + whatever needs to be changed on it
+   - How the pipeline works. reference trees etc
+   - Discuss importance of metric in studying biodiversity 
+   - what this metric tells us about a community 
+   - talk about the microbial populations and genetics, ya know the good stuff.
  - __Methods__ 
    - discription of how it works?
  - __Discussion__ 
@@ -56,7 +60,8 @@ __Jon__
    - what more needs to be added
    - what other functional could be added
    - troubleshooting and some of the quirks we still need to iron out
-   - some small graphs looking at various cogs. 
+   - Bar chart of leaf vs internal (if we are able to brank it down to branch we could even look at a specific taxa)
+   - example of output file format?
 
 ### Resources
 
