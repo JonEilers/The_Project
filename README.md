@@ -54,7 +54,11 @@ __Jon__
    - what this metric tells us about a community 
    - talk about the microbial populations and genetics, ya know the good stuff.
  - __Methods__ 
-   - discription of how it works?
+   - Learning how jplace files are formated
+   - Testing for errors 
+   - building mini-trees for verifying the scripts works
+   - structure of the code: parses tree, builds list of internal and leafs, parses placements, checks what list the edge is in, etc
+   - 
  - __Discussion__ 
    - pro and con of incorporating no-core libraries into the script (for example if we wanted to use the python newick script)
    - what more needs to be added
