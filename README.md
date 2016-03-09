@@ -46,6 +46,18 @@ __Jon__
 - __References__
   * Ten references: uuhhhh
 
+### Final Project Paper
+ - __Introduction__ 
+   -Use the same intro from project proposal + whatever needs to be changed on it 
+ - __Methods__ 
+   - discription of how it works?
+ - __Discussion__ 
+   - pro and con of incorporating no-core libraries into the script (for example if we wanted to use the python newick script)
+   - what more needs to be added
+   - what other functional could be added
+   - troubleshooting and some of the quirks we still need to iron out
+   - some small graphs looking at various cogs. 
+
 ### Resources
 
 __Online Arhaeoptryx example__ 
