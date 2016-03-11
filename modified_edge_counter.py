@@ -1,12 +1,11 @@
 import json
 import re
 
-
 internal_count = 0
 external_count = 0
 
 
-with open("COG0001.aligned.jplace") as json_data:
+with open("COG0002.aligned.jplace") as json_data:
 
     data = json.load(json_data)
 
@@ -19,6 +18,7 @@ with open("COG0001.aligned.jplace") as json_data:
     #initialize totalEdgeCount at -1 because the root is indicated by a {x} but we dont want to count that in the edgeCount variable
     totalEdgeCount = -1
     leafCount = 0
+    internalCount = 0
     #initialize lists to place leaf and internal edge numbers
     leafEdges = []
     internalEdges = []
@@ -30,10 +30,11 @@ with open("COG0001.aligned.jplace") as json_data:
             totalEdgeCount += 1
         if "|" in v:
             leafCount += 1
-            edgeNum = int(v.split('{')[1].split('}')[0])
-            leafEdges.append(edgeNum)
+            leaf_edgeNum = int(v.split('{')[1].split('}')[0])
+            leafEdges.append(leaf_edgeNum)
         elif v != '':
             internal_edgeNum = int(v.split('{')[1].split('}')[0])
+            internalCount += 1
             internalEdges.append(internal_edgeNum)
 
     placements = data['placements'] #placement key in json
@@ -42,41 +43,46 @@ with open("COG0001.aligned.jplace") as json_data:
     #initialize lists
     leafList = []
     internalList = []
-    
-    #initialize abundance counts
-    num_leaf_placements = 0
-    num_internal_placements = 0  
-
+    total_placements = 0
+    # there are i pquery elements in the 'placements list--for loop iterates through each pquery--basically placements[i]
+        #each pquery consists of a unicode list of placements (u'p') and short-read names (u'nm')
     for i in placements: #it works, but I am guessing there is a more efficient way to dig deep into a dictionary
 
-        placement_edge = i.values()[0][0][2] 
-        
-        # from what I understand the 'nm' list under 'p' is the sequences assigned to that edge. want to clarify with robin though
+        #verify total number of placements in the file
+        total_placements += 1
+        #i.values() retrieves the values (p and nm) of the unicode list (u'p', u'nm')
+        #indeces: [0][0][2]
+            #first [0]: retrieves pquery placements (p) from the [p , nm] list at index i
+            #second [0]: retrieves the first element in the list of potential placements (p) at index i
+                #the first placement listed has the highest posterior probability (this element contains the placement edge)
+            #[2]: the highest probability placement edge is the 3rd element in the placement information
+        placement_edge = i.values()[0][0][2]
+
+        #multiplicity is number of reads placed at that edge
         multiplicity = i.values()[1]
-        
-        #by logic above, the length of the nm list would be the number of short-read sequences associated with that pquery
         numReads = len(multiplicity)
-        
-        #named small list b/c we are placing it into a larger list (internalList or leafList, initialized above)
-        smallList = [placement_edge , numReads]
+
+        #check placement edge number against internal edge list
         if placement_edge in internalEdges:
-            internalList.append(smallList)
             internal_count += 1
-            num_internal_placements += numReads
+            smallList = [placement_edge , numReads]
+            internalList.append(smallList)
+        #check placement edge number against leaf edge list
         elif placement_edge in leafEdges:
-            leafList.append(smallList)
             external_count += 1
-            num_leaf_placements += numReads
-    print(internal_count)
-    print(external_count)
-    print(num_internal_placements)
-    print(num_leaf_placements)
-    
-    #sort [edge,seqNum] lists from lowest to highest edge number
+            smallList = [placement_edge , numReads]
+            leafList.append(smallList)
+
+    #combine list elements
     leafList.sort(key=lambda x: x[0])
     internalList.sort(key=lambda x: x[0])
-    print(leafList)
-    print(internalList)
+
+    leafList.sort(key=lambda x: x[0])
+    #l.sort(key=lambda x: x[2])
+    internalList.sort(key=lambda x: x[0])
+
+    print leafList
+    print internalList
     
     
     #goals:
