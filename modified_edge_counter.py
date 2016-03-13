@@ -1,11 +1,12 @@
 import json
 import re
+import csv
 
 internal_count = 0
 external_count = 0
 
 
-with open("COG0002.aligned.jplace") as json_data:
+with open("COG0001.aligned.jplace") as json_data:
 
     data = json.load(json_data)
 
@@ -44,6 +45,8 @@ with open("COG0002.aligned.jplace") as json_data:
     leafList = []
     internalList = []
     total_placements = 0
+    leafsWithPlacement = []
+    internalWithPlacement = []
     # there are i pquery elements in the 'placements list--for loop iterates through each pquery--basically placements[i]
         #each pquery consists of a unicode list of placements (u'p') and short-read names (u'nm')
     for i in placements: #it works, but I am guessing there is a more efficient way to dig deep into a dictionary
@@ -65,32 +68,59 @@ with open("COG0002.aligned.jplace") as json_data:
         #check placement edge number against internal edge list
         if placement_edge in internalEdges:
             internal_count += 1
+            if placement_edge not in internalWithPlacement:
+                internalWithPlacement.append(placement_edge)
             smallList = [placement_edge , numReads]
             internalList.append(smallList)
         #check placement edge number against leaf edge list
         elif placement_edge in leafEdges:
             external_count += 1
+            if placement_edge not in leafsWithPlacement:
+                leafsWithPlacement.append(placement_edge)
             smallList = [placement_edge , numReads]
             leafList.append(smallList)
 
-    #combine list elements
-    leafList.sort(key=lambda x: x[0])
-    internalList.sort(key=lambda x: x[0])
+    newLeafList = [] #this will essentially be an array of [[edge_a, numSequences],[edge_b, numSequences]...etc] without repeating edge numbers
+    leafSeqSum = 0
+    for i in range(len(leafsWithPlacement)):
+        counter = 0 #keeps running tally of sequences placed at edge (leafsWithPlacements[i])
+        tempEdgeNum = 0
+        for j in range(len(leafList)):
+            if (leafList[j][0] == leafsWithPlacement[i]):# when the first element in leafList[j] equals the element in the list of edges with placements
+                tempEdgeNum = leafsWithPlacement[i]
+                counter += leafList[j][1]
+                leafSeqSum += leafList[j][1]
+        pair_edgeSeq = [tempEdgeNum, "leaf", counter]
+        newLeafList.append(pair_edgeSeq)
 
-    leafList.sort(key=lambda x: x[0])
-    #l.sort(key=lambda x: x[2])
-    internalList.sort(key=lambda x: x[0])
+    print newLeafList
 
-    print leafList
-    print internalList
-    
-    
-    #goals:
-      #clean up program--implement main(), package loops/elifs into functions
-      #combine edge counts--if you look in sorted lists when it prints out there are multiple pqueries for the same edge
-        #check with robin about 'nm' and what it actually means--jplace file description says it could be a modified counter that likely doesnt reflect the absolute number of sequences
-      #ask robin about the placement of the edge element--do all klab jplace files have the edge number in that specific position
-      #write to file
-        #header containing total # of edges, # internal, # leaf, internal:leaf ratio
-        #some kind of delimited format to display the specific edge counts
-   
+    newInternalList = [] #this will essentially be an array of [[edge_a, numSequences],[edge_b, numSequences]...etc] without repeating edge numbers
+    internalSeqSum = 0
+    for i in range(len(internalWithPlacement)):
+        counter = 0 #keeps running tally of sequences placed at edge (leafsWithPlacements[i])
+        tempEdgeNum = 0
+        for j in range(len(internalList)):
+            if (internalList[j][0] == internalWithPlacement[i]):# when the first element in leafList[j] equals the element in the list of edges with placements
+                tempEdgeNum = internalWithPlacement[i]
+                counter += internalList[j][1]
+                internalSeqSum += internalList[j][1]
+        pair_edgeSeq = [tempEdgeNum, "internal", counter]
+        newInternalList.append(pair_edgeSeq)
+
+    print newInternalList
+    allEdges = newLeafList + newInternalList
+    allEdges.sort(key=lambda x: x[0])
+
+    with open("output.csv", "wb") as f:
+        writer = csv.writer(f)
+        writer.writerows(allEdges)
+
+
+    print(internal_count)
+    print(external_count)
+    #print total_placements
+    print leafSeqSum
+    print internalSeqSum
+    print leafCount
+    print internalCount
