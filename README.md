@@ -11,6 +11,14 @@ __To-do-list__
 Thoughts: apply to MBARI jplace. write a shell script that will take each jplace file, apply the script to it, write the results to an excel sheet, and repeat. Results should be name of jplace, associated cog, percent "confidently" placed. Also consider writing it so that "depth" is taken into account. 
 
 MBARI_2012
+* Internal Placement Count
+  -- 262953
+* leaf Placement Count
+  -- 250696
+* Percent of Reads placed Interally
+  -- 0.511931299389
+* Percent of Reads placed on leafs
+  -- 0.488068700611
 
 MBARI_2014
 * Internal Placement Count
@@ -31,3 +39,4 @@ MBARI_2016
  -- 0.462497586329
 * Percent of Reads placed on leafs
  -- 0.537502413671
+
